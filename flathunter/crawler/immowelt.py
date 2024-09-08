@@ -62,7 +62,7 @@ class Immowelt(Crawler):
 
             try:
                 price = adv.find(
-                    "div", attrs={"data-test": "cardmfe-price-testid"}).text
+                    "div", attrs={"data-testid": "cardmfe-price-testid"}).text
             except:
                 price = ""
 
