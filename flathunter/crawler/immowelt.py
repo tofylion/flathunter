@@ -62,7 +62,7 @@ class Immowelt(Crawler):
 
             try:
                 price = adv.find(
-                    "div", attrs={"data-test": "cardmfe-price-testid"}).text
+                    "div", attrs={"data-testid": "cardmfe-price-testid"}).text
             except:
                 price = ""
 
@@ -117,7 +117,9 @@ class Immowelt(Crawler):
                 'address': address,
                 'crawler': self.get_name()
             }
+            print(details)
             entries.append(details)
 
         logger.debug('Number of entries found: %d', len(entries))
-        return entries
+        # return entries
+        return []
