@@ -117,9 +117,7 @@ class Immowelt(Crawler):
                 'address': address,
                 'crawler': self.get_name()
             }
-            print(details)
             entries.append(details)
 
         logger.debug('Number of entries found: %d', len(entries))
-        # return entries
-        return []
+        return entries
